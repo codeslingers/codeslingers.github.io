@@ -1,0 +1,31 @@
+section {
+  /*padding-top: 3rem;*/
+}
+
+.jumbotron-bg{
+  /*background-image: url("../img/zen-bg2.jpg") !important;
+  min-height: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;*/
+  background-size: cover;
+}
+
+#texto-presenca, #recolha-presenca{
+  display: none;
+}
+
+.jumbotron-bg h2{
+  font-weight: 400;
+}
+
+
+.clean-list {
+  list-style-type: none;
+  margin: 1rem;
+  padding: 0;
+}
+
+.clean-list li {
+  margin-bottom: 1rem;
+}
