@@ -11,7 +11,8 @@ section {
   background-size: cover;
 }
 
-#texto-presenca, #recolha-presenca{
+#texto-presenca, #recolha-presenca, #texto-influencia, #recolha-influencia,
+#texto-sistemas, #recolha-sistemas{
   display: none;
 }
 
@@ -28,4 +29,12 @@ section {
 
 .clean-list li {
   margin-bottom: 1rem;
+}
+
+.togOn :hover{
+  cursor: pointer;
+}
+
+.togOff :hover{
+  cursor: pointer;
 }
