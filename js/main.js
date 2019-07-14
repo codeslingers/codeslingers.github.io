@@ -9,7 +9,7 @@ $( document ).ready(function() {
       event.preventDefault();
       contactMail = $(this).find('input[type="text"]').val();
       console.log( "submit " + contactMail);
-      $.get( "http://bibino1.jelastic.saveincloud.net/go/contact/"+contactMail, function() {
+      $.get( "https://bibino1.jelastic.saveincloud.net/go/contact/"+contactMail, function() {
         console.log( "saved" );
       })
       .done(function() {
