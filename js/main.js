@@ -12,20 +12,21 @@ $( document ).ready(function() {
 
       request = $.ajax({
         method: "GET",
-        url: "http://bibino1.jelastic.saveincloud.net/go/contact/"+contactMail",
-        crossDomain : "true"
+        url: "https://bibino1.jelastic.saveincloud.net/go/contact/"+contactMail,
+        crossDomain : "true",
+        dataType: 'jsonp'
       });
 
-      request.done(function(msg) {
-        console.log( "second success" +msg );
+      request.done(function() {
+        console.log( "success" );
       });
 
-      request.fail(function(msg) {
-        console.log( "error" +msg);
+      request.fail(function() {
+        console.log( "error");
       });
 
-      request.always(function(msg) {
-        console.log( "finished" +msg);
+      request.always(function() {
+        console.log( "finished" );
       });
     });
 
