@@ -9,20 +9,23 @@ $( document ).ready(function() {
       event.preventDefault();
       contactMail = $(this).find('input[type="text"]').val();
       console.log( "submit " + contactMail);
-      $.get( "http://bibino1.jelastic.saveincloud.net/go/contact/"+contactMail ,
-      {
+
+      request = $.ajax({
+        method: "GET",
+        url: "http://bibino1.jelastic.saveincloud.net/go/contact/"+contactMail",
         crossDomain : "true"
-      }, function() {
-        console.log( "saved" );
-      })
-      .done(function() {
-        console.log( "second success" );
-      })
-      .fail(function() {
-        console.log( "error" );
-      })
-      .always(function() {
-        console.log( "finished" );
+      });
+
+      request.done(function(msg) {
+        console.log( "second success" +msg );
+      });
+
+      request.fail(function(msg) {
+        console.log( "error" +msg);
+      });
+
+      request.always(function(msg) {
+        console.log( "finished" +msg);
       });
     });
 
