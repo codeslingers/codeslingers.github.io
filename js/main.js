@@ -12,9 +12,9 @@ $( document ).ready(function() {
 
       request = $.ajax({
         method: "GET",
-        url: "https://bibino1.jelastic.saveincloud.net/go/contact/"+contactMail,
+        url: "http://bibino1.jelastic.saveincloud.net/go/contact/"+contactMail,
         crossDomain : "true",
-        dataType: 'jsonp'
+        dataType: "text"
       });
 
       request.done(function() {
