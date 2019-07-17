@@ -10,14 +10,24 @@ $( document ).ready(function() {
       contactMail = $(this).find('input[type="text"]').val();
       console.log( "submit " + contactMail);
 
-	  $("#mailSave-menu").load("http://bibino1.jelastic.saveincloud.net/go/contact/"+contactMail, function(responseTxt, statusTxt, xhr){
-		if(statusTxt == "success")
-		  console.log( "success" );
-		if(statusTxt == "error")
-		  console.log("Error: " + xhr.status + ": " + xhr.statusText);
-	  });
+      request = $.ajax({
+        method: "GET",
+        url: "http://bibino1.jelastic.saveincloud.net/go/contact/"+contactMail,
+        crossDomain : "true",
+        dataType: "jsonp text"
+      });
 
+      request.done(function() {
+        console.log( "success" );
+      });
 
+      request.fail(function() {
+        console.log( "error");
+      });
+
+      request.always(function() {
+        console.log( "finished" );
+      });
     });
 
 });
