@@ -8,26 +8,28 @@ $( document ).ready(function() {
     $( "form" ).submit(function( event ) {
       event.preventDefault();
       contactMail = $(this).find('input[type="text"]').val();
-      console.log( "submit " + contactMail);
+	  $( "#contactMail").val(contactMail);
+ 	  $( "#mailSave").submit();
+      console.log( "submit " + $( "#contactMail").val());
 
-      request = $.ajax({
-        method: "GET",
-        url: "http://bibino1.jelastic.saveincloud.net/go/contact/"+contactMail,
-        crossDomain : "true",
-        dataType: "jsonp text"
-      });
+//      request = $.ajax({
+//        method: "GET",
+//        url: "http://bibino1.jelastic.saveincloud.net/go/contact/"+contactMail,
+//        crossDomain : "true",
+//        dataType: "jsonp text"
+//      });
 
-      request.done(function() {
-        console.log( "success" );
-      });
+//      request.done(function() {
+//        console.log( "success" );
+//      });
 
-      request.fail(function() {
-        console.log( "error");
-      });
+//      request.fail(function() {
+//        console.log( "error");
+//      });
 
-      request.always(function() {
-        console.log( "finished" );
-      });
+//      request.always(function() {
+//        console.log( "finished" );
+//      });
     });
 
 });
