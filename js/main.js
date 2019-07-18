@@ -5,13 +5,14 @@ $( document ).ready(function() {
     buildSaibaMais("presenca");
     buildSaibaMais("sistemas");
 
-    $( "form" ).submit(function( event ) {
-      event.preventDefault();
-      contactMail = $(this).find('input[type="text"]').val();
-	  $( "#contactMail").attr("value",contactMail);
- 	  $( "#mailSave").submit();
-      console.log( "submit " + $( "#contactMail").val());
-
+    $( "#mailSave-menu", "mailSave-splash" ).each( function(){
+		$(this).submit(function( event ) {
+			event.preventDefault();
+			contactMail = $(this).find('input[type="text"]').val();
+			$( "#contactMail").attr("value",contactMail);
+			$( "#mailSave").submit();
+			console.log( "submit " + $( "#contactMail").val());
+		});
 //      request = $.ajax({
 //        method: "GET",
 //        url: "http://bibino1.jelastic.saveincloud.net/go/contact/"+contactMail,
