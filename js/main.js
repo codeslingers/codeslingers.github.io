@@ -8,7 +8,7 @@ $( document ).ready(function() {
     $( "form" ).submit(function( event ) {
       event.preventDefault();
       contactMail = $(this).find('input[type="text"]').val();
-	  $( "#contactMail").val(contactMail);
+	  $( "#contactMail").attr("value",contactMail);
  	  $( "#mailSave").submit();
       console.log( "submit " + $( "#contactMail").val());
 
