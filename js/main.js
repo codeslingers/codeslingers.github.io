@@ -1,38 +1,14 @@
 $( document ).ready(function() {
-    console.log( "ready!" );
+    console.log( "init!" );
 
     buildSaibaMais("influencia");
     buildSaibaMais("presenca");
     buildSaibaMais("sistemas");
 
-    $( "#mailSave-menu", "mailSave-splash" ).each( function(){
-		$(this).submit(function( event ) {
-			event.preventDefault();
-			contactMail = $(this).find('input[type="text"]').val();
-			$( "#contactMail").attr("value",contactMail);
-			$( "#mailSave").submit();
-			console.log( "submit " + $( "#contactMail").val());
-		});
-//      request = $.ajax({
-//        method: "GET",
-//        url: "http://bibino1.jelastic.saveincloud.net/go/contact/"+contactMail,
-//        crossDomain : "true",
-//        dataType: "jsonp text"
-//      });
+    buildMailSave("menu");
+    buildMailSave("splash");
 
-//      request.done(function() {
-//        console.log( "success" );
-//      });
-
-//      request.fail(function() {
-//        console.log( "error");
-//      });
-
-//      request.always(function() {
-//        console.log( "finished" );
-//      });
-    });
-
+    console.log( "ready!" );
 });
 
 
@@ -42,6 +18,16 @@ function buildSaibaMais(baseId){
       toggleLeitura(baseId);
     });
   });
+}
+
+function buildMailSave(baseId){
+    $( "#mailSave-" + baseId ).submit( function(event){
+      event.preventDefault();
+      contactMail = $(this).find('input[type="text"]').val();
+      url = "http://bibino1.jelastic.saveincloud.net/go/contact/" + contactMail;
+      $(location).attr('href',url);
+      console.log( "save " + contactMail);
+    });
 }
 
 function toggleLeitura(baseId){
