@@ -20,6 +20,14 @@ section {
   font-weight: 400;
 }
 
+.footNotes{
+  padding-top: 2rem;
+}
+
+.footNotes .row{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 
 .clean-list {
   list-style-type: none;
@@ -31,10 +39,8 @@ section {
   margin-bottom: 1rem;
 }
 
-.togOn :hover{
+.togOn{
   cursor: pointer;
-}
-
-.togOff :hover{
-  cursor: pointer;
+  font-weight: bold;
+  font-style: italic;
 }
