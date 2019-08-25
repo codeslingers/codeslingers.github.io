@@ -11,6 +11,10 @@ $( document ).ready(function() {
     buildMailSave("menu");
     buildMailSave("splash");
 
+    buildBindSubmitter( "splash", "#basic-addon2 i");
+    buildBindSubmitter( "menu", "#basic-addon1 i");
+
+
     console.log( "ready!" );
 });
 
@@ -66,6 +70,9 @@ function buildMailSave(baseId){
       $(location).attr('href',url);
       console.log( "save " + contactMail);
     });
+
+    $( "#mailSave-" + baseId )
+
 }
 
 function buildSaibaMais(baseId){
@@ -73,5 +80,11 @@ function buildSaibaMais(baseId){
     $(this).click(function() {
       toggleLeitura(baseId);
     });
+  });
+}
+
+function buildBindSubmitter( baseId, submitter){
+  $( submitter ).click(function() {
+    $( "#mailSave-" + baseId ).submit();
   });
 }

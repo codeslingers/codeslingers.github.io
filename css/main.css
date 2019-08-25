@@ -44,3 +44,7 @@ section {
   font-weight: bold;
   font-style: italic;
 }
+
+.icon-right-outline{
+  cursor: pointer;
+}
