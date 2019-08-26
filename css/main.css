@@ -48,3 +48,62 @@ section {
 .icon-right-outline{
   cursor: pointer;
 }
+
+
+.jumbotron-bg-digital{
+  background-image: url("../img/influencer-bg-1800p.jpg") !important;
+  padding: 1rem  !important;
+  min-height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+@media (min-width: 576px) {
+  .jumbotron-bg-digital{
+    background-image: url("../img/influencer-bg-1800p.jpg") !important;
+    padding: 8rem  !important;
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 768px) {
+  .jumbotron-bg-digital{
+    background-image: url("../img/influencer-bg-1800p.jpg") !important;
+    padding: 10rem !important;
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 992px) {
+  .jumbotron-bg-digital{
+    background-image: url("../img/influencer-bg-1800p.jpg") !important;
+    padding: 12rem !important;
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 1200px) {
+  .jumbotron-bg-digital{
+    background-image: url("../img/influencer-bg-1800p.jpg") !important;
+    padding: 20rem !important;
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+}
