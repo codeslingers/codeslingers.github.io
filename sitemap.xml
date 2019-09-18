@@ -1,0 +1,27 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+<loc>http://codeslingers.github.io</loc>
+<lastmod>2019-08-30T14:15:03+00:00</lastmod>
+<priority>1.00</priority>
+</url>
+<url>
+<loc>http://codeslingers.github.io/index.html</loc>
+<lastmod>2019-08-27T14:15:03+00:00</lastmod>
+<priority>0.50</priority>
+</url>
+<url>
+<loc>http://codeslingers.github.io/arquitetura.html</loc>
+<lastmod>2018-02-25T22:15:03+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>http://codeslingers.github.io/digital-influencers.html</loc>
+<lastmod>2019-08-26T18:43:40+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>http://codeslingers.github.io/seo.html</loc>
+<lastmod>2019-08-26T18:43:40+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+</urlset>
