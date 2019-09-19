@@ -1,0 +1,18 @@
+# Group 1
+User-agent: *
+Allow: /
+Disallow: /css/
+Disallow: /font/
+Disallow: /img/
+Disallow: /js/
+Disallow: .gitignore
+Disallow: LICENSE
+Disallow: README.md
+Disallow: /.gitignore
+Disallow: /LICENSE
+Disallow: /README.md
+Disallow: /*.gitignore
+Disallow: /*LICENSE
+Disallow: /*.md
+
+Sitemap: http://codeslingers.github.io/sitemap.xml
