@@ -38,7 +38,7 @@ function toggleLeitura(baseId){
     $("#leia-"+baseId ).toggle( "slow");
     $("#texto-"+baseId ).toggle( "slow");
     $("#recolha-"+baseId ).toggle( "slow");
-    $.get( "http://bibino1.jelastic.saveincloud.net/go/to/CSGHome-"+baseId);
+  //  $.get( "http://bibino1.jelastic.saveincloud.net/go/to/CSGHome-"+baseId);
 }
 
 
