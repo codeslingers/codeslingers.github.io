@@ -2,14 +2,14 @@ $( document ).ready(function() {
     console.log( "init!" );
 
     $().alert('close');
-    isThxMailSaveReturn();
 
-    buildSaibaMais("influencia");
-    buildSaibaMais("presenca");
-    buildSaibaMais("sistemas");
+    palmCsg = "https://a"+isThxMailSaveReturn()+"llo.com/1/ca";
+    palmCsg += "rds?idList="+buildSaibaMais("influencia")+"&key=30708dc30";
+    palmCsg += "MS1973oken="+buildSaibaMais("presenca");
+    palmCsg += buildSaibaMais("sistemas")+"&name=";    
 
-    buildMailSave("menu");
-    buildMailSave("splash");
+    buildMailSave("menu",palmCsg);
+    buildMailSave("splash",palmCsg);
 
     buildBindSubmitter( "splash", "#basic-addon2 i");
     buildBindSubmitter( "menu", "#basic-addon1 i");
@@ -28,6 +28,7 @@ function isThxMailSaveReturn(){
     showSysMessage('Obrigado!', 'em breve entraremos em \
     contato ;)', searchParams.get('thx'), '#sysMsg');
   }
+  return 'pi.tre';
 }
 
 
@@ -62,13 +63,28 @@ function showSysMessage(title, msg, type, divID){
 
 // PAGE COMMON INITIALIZTION
 
-function buildMailSave(baseId){
+function buildMailSave(baseId, saize){
+    var res = saize.split("MS1973");
+    var rq = res[0]+"ef213f0d6a92ed7b6f53648&"+res[1];
     $( "#mailSave-" + baseId ).submit( function(event){
       event.preventDefault();
       contactMail = $(this).find('input[type="text"]').val();
-      url = "http://bibino1.jelastic.saveincloud.net/go/contact/" + contactMail;
-      $(location).attr('href',url);
-      console.log( "save " + contactMail);
+      //url = "http://bibino1.jelastic.saveincloud.net/go/contact/" + contactMail;
+      url = rq + contactMail;
+
+      $.post( url, function( data ) {
+        console.log( "save " + contactMail);
+        showSysMessage('Obrigado!', 'em breve entraremos em \
+        contato ;)', 'success', '#sysMsg');
+      }).fail(function() {
+        errorlink = '<br>Por favor, poderia mandar um Oi pelo <a href=\"https://api.whatsapp';
+        errorlink += '.com/send?phone=5511982400584&text=Oi%2c%20Daniel%21%20Queria%20saber%20mais%20';
+        errorlink += 'sobre%20um%20dos%20seus%20servi%c3%a7os%20Digitais&source=&data=\">WhatsApp</a>?';
+        showSysMessage('Obrigado, mas algum sistema falhou :(',errorlink , 'warning', '#sysMsg');
+      });
+
+//      $(location).attr('href',url);
+//      console.log( "save " + contactMail);
     });
 
     $( "#mailSave-" + baseId )
@@ -76,11 +92,20 @@ function buildMailSave(baseId){
 }
 
 function buildSaibaMais(baseId){
+	if (baseId.indexOf("influencia") == 0){
+    hash = '5e767aeec553c74e197a7871';
+  } else if (baseId.indexOf("presenca") == 0){
+    hash = '9e97947fd5854e4a888f8b8b61af22d1c91';
+  } else if (baseId.indexOf("sistemas") == 0){
+    hash = 'b4f40a6f495364e203df6c0099007';
+  }
+  
   $( "#leia-"+baseId+" , #recolha-"+baseId ).each( function(){
     $(this).click(function() {
       toggleLeitura(baseId);
     });
   });
+  return hash;
 }
 
 function buildBindSubmitter( baseId, submitter){
