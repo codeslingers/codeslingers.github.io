@@ -65,7 +65,7 @@ function showSysMessage(title, msg, type, divID){
 
 function buildMailSave(baseId, saize){
     var res = saize.split("MS1973");
-    var rq = res[0]+"ef213f0d6a92ed7b6f53648&"+res[1];
+    var rq = res[0]+"ef213f0d6a92ed7b6f53648&t"+res[1];
     $( "#mailSave-" + baseId ).submit( function(event){
       event.preventDefault();
       contactMail = $(this).find('input[type="text"]').val();
